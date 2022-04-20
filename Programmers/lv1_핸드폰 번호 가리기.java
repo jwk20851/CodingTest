@@ -1,7 +1,4 @@
-package lv1;
-
-public class lv1_핸드폰번호가리기 {
-	class Solution {
+class Solution {
 	    public String solution(String phone_number) {
 	        String answer = "";
 	        
@@ -13,4 +10,3 @@ public class lv1_핸드폰번호가리기 {
 	        return answer;
 	    }
 	}
-}
