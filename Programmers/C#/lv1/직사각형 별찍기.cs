@@ -1,4 +1,6 @@
-﻿using System;
+﻿https://programmers.co.kr/learn/courses/30/lessons/12969
+
+using System;
 
 public class Example
 {
