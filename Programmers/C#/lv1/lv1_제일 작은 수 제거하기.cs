@@ -12,11 +12,10 @@ public class Solution
             return answer;
         }
 
-        List<int> list = new List<int>();
+        List<int> list = new List<int>(arr);
         int min = arr[0];
         foreach (int i in arr)
         {
-            list.Add(i);
             if (min >= i)
                 min = i;
         }
