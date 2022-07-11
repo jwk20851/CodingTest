@@ -8,6 +8,8 @@ public class Solution
     public int solution(int n, int[] lost, int[] reserve)
     {
         int answer = 0;
+        Array.Sort(lost);
+        Array.Sort(reserve);
 
         List<int> LostList = new List<int>(lost);
         List<int> ReserveList = new List<int>(reserve);
@@ -48,7 +50,7 @@ public class Solution
             }
         }
 
-        answer = n - (LostList.Count - answer);
+        answer += n - LostList.Count;
 
         return answer;
     }
