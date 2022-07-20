@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\B3",
+    "\\B3\\C#",
+    "\\B5",
+    "\\B5\\C#"
   ],
-  "SelectedNode": "\\B5",
+  "SelectedNode": "\\B3\\C#\\B3_오븐 시계.cs",
   "PreviewInSolutionExplorer": false
 }
