@@ -1,4 +1,4 @@
-https://www.acmicpc.net/submit/1000/46378319
+https://www.acmicpc.net/problem/1000
 
 import java.util.*;
 

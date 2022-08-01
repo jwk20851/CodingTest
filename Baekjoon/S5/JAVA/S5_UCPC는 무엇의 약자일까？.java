@@ -1,4 +1,4 @@
-https://www.acmicpc.net/submit/15904
+https://www.acmicpc.net/problem/15904
 
 import java.io.*;
 

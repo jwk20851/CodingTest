@@ -1,17 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\B2",
-    "\\B2\\JAVA",
-    "\\B3",
-    "\\B3\\C#",
-    "\\B5",
-    "\\B5\\C#",
-    "\\B5\\JAVA",
     "\\S3",
     "\\S3\\C#",
-    "\\S5"
+    "\\S4",
+    "\\S4\\C#",
+    "\\S5",
+    "\\S5\\C#",
+    "\\S5\\JAVA"
   ],
-  "SelectedNode": "\\S3\\C#\\S3_소수 구하기.cs",
+  "SelectedNode": "\\S5\\C#\\S5_소수 찾기.cs",
   "PreviewInSolutionExplorer": false
 }

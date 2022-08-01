@@ -1,4 +1,4 @@
-https://www.acmicpc.net/submit/2751
+https://www.acmicpc.net/problem/2751
 
 using System;
 using System.Text;

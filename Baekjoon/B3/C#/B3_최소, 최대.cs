@@ -1,4 +1,4 @@
-https://www.acmicpc.net/submit/10818
+https://www.acmicpc.net/problem/10818
 
 using System;
 
