@@ -10,28 +10,40 @@ namespace Baekjoon
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
-            int p = int.Parse(Console.ReadLine());
+            string[] str = Console.ReadLine().Split(' ');
+            int[] button = new int[n + 1];
 
-            for (int i = 0; i < p; i++)
+            for (int i = 1; i <= str.Length; i++)
+                button[i] = int.Parse(str[i - 1]);
+
+            int m = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < m; i++)
             {
-                String str = Console.ReadLine();
-                int num = (int)Char.GetNumericValue(str[2]);
-                if (str[0] == '1')
+                int[] A = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+
+                int num = A[1];
+
+                if (A[0] == 1)
                 {
-                    for (int j = num - 1; j < n; j += num)
-                        arr[j] = (arr[j] == 0) ? 1 : 0;
+                    for (int j = num; j <= n; j += num)
+                    {
+                        if (j > n)
+                            break;
+                        button[j] = Math.Abs(button[j] - 1);
+                    }
                 }
                 else
                 {
-                    arr[num - 1] = (arr[num - 1] == 0) ? 1 : 0;
-                    int cnt = (num <= n - num) ? num - 1 : n - num;
-                    for (int j = 1; j <= cnt; j++)
+                    button[num] = Math.Abs(button[num] - 1);
+                    int cnt = 1;
+                    while (true)
                     {
-                        if (arr[num - 1 - j] == arr[num - 1 + j])
+                        if ((num - cnt) >= 1 && (num + cnt) <= n && button[num - cnt] == button[num + cnt])
                         {
-                            arr[num - 1 - j] = (arr[num - 1 - j] == 0) ? 1 : 0;
-                            arr[num - 1 + j] = (arr[num - 1 + j] == 0) ? 1 : 0;
+                            button[num - cnt] = Math.Abs(button[num - cnt] - 1);
+                            button[num + cnt] = Math.Abs(button[num + cnt] - 1);
+                            cnt++;
                         }
                         else
                             break;
@@ -40,13 +52,15 @@ namespace Baekjoon
             }
 
             StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
-                sb.Append(arr[i] + " ");
-                if ((i + 1) % 20 == 0)
+                sb.Append(button[i]);
+                if (i % 20 == 0)
                     sb.Append("\n");
+                else
+                    sb.Append(" ");
             }
-            Console.WriteLine(sb);
+            Console.Write(sb);
         }
     }
 }
