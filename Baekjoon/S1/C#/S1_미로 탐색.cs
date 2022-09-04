@@ -26,7 +26,7 @@ namespace Baekjoon
             for (int i = 0; i < n; i++)
             {
                 string str = Console.ReadLine();
-                for (int j = 0; j < str.Length; j++)
+                for (int j = 0; j < m; j++)
                 {
                     map[i, j] = str[j] - '0';
                 }
@@ -67,7 +67,7 @@ namespace Baekjoon
 
         static bool Check(int nx, int ny)
         {
-            if (nx >= 0 && nx < m && ny >= 0 && ny < m)
+            if (nx >= 0 && nx < n && ny >= 0 && ny < m)
                 return true;
             else
                 return false;
