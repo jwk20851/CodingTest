@@ -13,18 +13,15 @@ namespace Baekjoon
             int n = arr[0];
             int m = arr[1];
 
-            List<string> li = new List<string>();
+            HashSet<string> hs = new HashSet<string>();
+
             for (int i = 0; i < n; i++)
-            {
-                li.Add(Console.ReadLine());
-            }
+                hs.Add(Console.ReadLine());
 
             int cnt = 0;
             for (int i = 0; i < m; i++)
-            {
-                if (li.Contains(Console.ReadLine()))
+                if (hs.Contains(Console.ReadLine()))
                     cnt++;
-            }
 
             Console.Write(cnt);
         }
