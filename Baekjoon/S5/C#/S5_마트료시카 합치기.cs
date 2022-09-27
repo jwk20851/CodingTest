@@ -24,15 +24,14 @@ namespace Beakjoon
 
             int cnt = 1;
             int max = 0;
-            while (li.Count > 0)
+            while (li.Count > 1)
             {
-                li.RemoveAt(0);
-
-                if (li.Count > 1 && li[0] == li[1])
+                if (li[0] == li[1])
                     cnt++;
                 else
                     cnt = 1;
 
+                li.RemoveAt(0);
                 max = Math.Max(max, cnt);
             }
 
