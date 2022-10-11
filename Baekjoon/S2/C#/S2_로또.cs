@@ -14,8 +14,7 @@ namespace Baekjoon
             while (true)
             {
                 arr = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
-                Console.WriteLine($"{string.Join(",", arr)}");
-                int k = arr[0];
+                k = arr[0];
                 check = new bool[k];
 
                 if (k == 0)
@@ -28,7 +27,6 @@ namespace Baekjoon
 
         static void DFS(int start, int dep)
         {
-            Console.WriteLine("dep: " + dep);
             if (dep == 6)
             {
                 for (int i = 0; i < k; i++)
@@ -42,7 +40,7 @@ namespace Baekjoon
             for (int i = start; i < k; i++)
             {
                 check[i] = true;
-                DFS(i + 1, dep +);
+                DFS(i + 1, dep + 1);
                 check[i] = false;
             }
         }
