@@ -12,14 +12,24 @@ namespace Beakjoon
             int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
             int x = int.Parse(Console.ReadLine());
 
+            Array.Sort(arr);
+
+            int left = 0;
+            int right = n - 1;
             int cnt = 0;
-            for (int i = 0; i < n - 1; i++)
+            while (left < right)
             {
-                for (int j = i + 1; j < n; i++)
+                int sum = arr[left] + arr[right];
+                if (sum == x)
                 {
-                    if (x == arr[i] + arr[j])
-                        cnt++;
+                    left++;
+                    right--;
+                    cnt++;
                 }
+                else if (sum > x)
+                    right--;
+                else
+                    left++;
             }
 
             Console.WriteLine(cnt);
