@@ -18,13 +18,19 @@ namespace Baekjoon
                 dis[i] = arr[1];
                 if (arr[0] == 1 || arr[0] == 2)
                 {
-                    maxX = Math.Max(maxX, arr[1]);
-                    idxX = i;
+                    if (maxX < dis[i])
+                    {
+                        maxX = dis[i];
+                        idxX = i;
+                    }
                 }
                 else
                 {
-                    maxY = Math.Max(maxY, arr[1]);
-                    idxY = i;
+                    if (maxY < dis[i])
+                    {
+                        maxY = dis[i];
+                        idxY = i;
+                    }
                 }
             }
 
