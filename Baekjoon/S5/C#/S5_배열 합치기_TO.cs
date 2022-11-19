@@ -1,6 +1,7 @@
 https://www.acmicpc.net/problem/11728
 
 using System;
+using System.Text;
 
 namespace Baekjoon
 {
@@ -15,16 +16,24 @@ namespace Baekjoon
             int[] a = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
             int[] b = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
 
-            int[] ans = new int[n + m];
+            StringBuilder sb = new StringBuilder();
+            int ap = 0, bp = 0;
+            while (ap + bp < n + m)
+            {
+                if (ap == n)
+                    sb.Append(b[bp++] + " ");
+                else if (bp == m)
+                    sb.Append(a[ap++] + " ");
+                else
+                {
+                    if (a[ap] < b[bp])
+                        sb.Append(a[ap++] + " ");
+                    else
+                        sb.Append(b[bp++] + " ");
+                }
+            }
 
-            for (int i = 0; i < n; i++)
-                ans[i] = a[i];
-            for (int i = n; i < n + m; i++)
-                ans[i] = b[i - n];
-
-            Array.Sort(ans);
-
-            Console.WriteLine($"{string.Join(" ", ans)}");
+            Console.WriteLine(sb);
         }
     }
 }
