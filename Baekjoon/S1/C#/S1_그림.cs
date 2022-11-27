@@ -65,12 +65,13 @@ namespace Baekjoon
                     int nx = vx + dx[i];
                     int ny = vy + dy[i];
 
-                    if (nx >= 0 || nx < m || ny >= 0 || ny < n)
+                    if (nx >= 0 && nx < n && ny >= 0 && ny < m)
                     {
-                        if (!visit[nx, ny] || map[nx, ny] == 1)
+                        if (!visit[nx, ny] && map[nx, ny] == 1)
                         {
-                            size++;
+                            visit[nx, ny] = true;
                             q.Enqueue((nx, ny));
+                            size++;
                         }
                     }
                 }
