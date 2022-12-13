@@ -9,7 +9,7 @@ namespace Baekjoon
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            int[] dp = new int[n + 1];
+            int[] dp = new int[100001];
 
             Array.Fill(dp, Int32.MaxValue);
 
