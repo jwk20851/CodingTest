@@ -1,7 +1,6 @@
 https://www.acmicpc.net/problem/13301
 
 using System;
-using System.Collections.Generic;
 
 namespace Beakjoon
 {
@@ -10,22 +9,16 @@ namespace Beakjoon
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
+            long[] dp = new long[n + 1];
+            dp[0] = dp[1] = 1;
 
-            List<long> li = new List<long>();
-            List<long> ans = new List<long>();
+            for (int i = 2; i <= n; i++)
+                dp[i] = dp[i - 1] + dp[i - 2];
 
-            li.Add(1);
-            li.Add(1);
-
-            for (int i = 2; i < n; i++)
-                li.Add(li[i - 2] + li[i - 1]);
-
-            ans.Add(4);
-
-            for (int i = 1; i < n; i++)
-                ans.Add(ans[i - 1] + li[i] * 2);
-
-            Console.Write(ans[n - 1]);
+            if (n == 1)
+                Console.WriteLine(4);
+            else
+                Console.WriteLine(dp[n - 1] * 4 + dp[n - 2] * 2);
         }
     }
 }
