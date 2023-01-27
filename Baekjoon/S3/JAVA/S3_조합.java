@@ -15,7 +15,6 @@ public class Main{
         
         BigInteger bi1 = BigInteger.ONE;
 		BigInteger bi2 = BigInteger.ONE;
-		
 		for(int i = 0; i < m; i++){
 		    bi1 = bi1.multiply(new BigInteger(String.valueOf(n-i)));
 			bi2 = bi2.multiply(new BigInteger(String.valueOf(i+1)));
