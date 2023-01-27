@@ -16,10 +16,7 @@ public class Main{
         BigInteger[][] dp = new BigInteger[n+1][n+1];
         for(int i = 1; i <= n; i++){
             for(int j = 0; j <= i; j++){
-                if(j==0 || j==i)
-                    dp[i][j] = BigInteger.ONE;
-                else
-                    dp[i][j] = dp[i-1][j-1].add(dp[i-1][j]);
+                dp[i][j] = (j==0 || j==i)? BigInteger.ONE : dp[i-1][j-1].add(dp[i-1][j]);
             }
         }
 		
