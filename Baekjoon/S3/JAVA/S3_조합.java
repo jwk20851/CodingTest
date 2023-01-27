@@ -13,13 +13,16 @@ public class Main{
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
         
-        BigInteger bi1 = BigInteger.ONE;
-		BigInteger bi2 = BigInteger.ONE;
-		for(int i = 0; i < m; i++){
-		    bi1 = bi1.multiply(new BigInteger(String.valueOf(n-i)));
-			bi2 = bi2.multiply(new BigInteger(String.valueOf(i+1)));
-		}
+        BigInteger[][] dp = new BigInteger[n+1][n+1];
+        for(int i = 1; i <= n; i++){
+            for(int j = 0; j <= i; j++){
+                if(j==0 || j==i)
+                    dp[i][j] = BigInteger.ONE;
+                else
+                    dp[i][j] = dp[i-1][j-1].add(dp[i-1][j]);
+            }
+        }
 		
-		System.out.println(bi1.divide(bi2));
+		System.out.println(dp[n][m]);
 	}
 }
