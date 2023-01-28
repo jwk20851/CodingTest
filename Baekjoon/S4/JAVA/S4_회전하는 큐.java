@@ -18,21 +18,21 @@ public class Main{
 		for(int i = 1; i <= n; i++)
 			dq.add(i);
 			
-		int[] arr = new int[m];
 		st = new StringTokenizer(br.readLine());
+		int[] arr = new int[m];
 		for(int i = 0; i < m; i++)
 			arr[i] = Integer.parseInt(st.nextToken());
 		
 		int cnt = 0;
 		for(int i = 0; i < m; i++){
-			if(check(arr[i])) {
+			if(check(arr[i])){
 				while(arr[i] != dq.get(0)){
 				    dq.addLast(dq.pollFirst());
 				    cnt++;
 				}
 			}
 			else{
-				while(arr[i] != dq.get(0)) {
+				while(arr[i] != dq.get(0)){
 				    dq.addFirst(dq.pollLast());
 				    cnt++;
 				}
@@ -48,7 +48,6 @@ public class Main{
 			if(n == dq.get(i))
 				return true;
 		}
-		
 		return false;
 	}
 }
