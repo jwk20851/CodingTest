@@ -9,7 +9,6 @@ import java.util.Arrays;
 public class Main{
     static int n = 0, m = 0;
     static int[] arr, ans;
-    static boolean[] visit;
     static StringBuilder sb = new StringBuilder();
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
