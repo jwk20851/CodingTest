@@ -12,21 +12,22 @@ public class Main{
 		
 		String[] tmp = br.readLine().split(" ");
 		for(int i = 0; i < n; i++)
-            arr[i] = Integer.parseInt(tmp[0]);
+            arr[i] = Integer.parseInt(tmp[i]);
 		
-		int max = 0, cnt = 0;
-		for(int i = 0; i < n-1; i++) {
-			if(arr[i] <= arr[i+1]) cnt++;
-			else cnt = 1;
-			max = Math.max(max, cnt);
+		int max = 0, cnt = 1;
+		for(int i = 0; i < n-1; i++){
+		    cnt = (arr[i] <= arr[i+1])? cnt+1 : 1;
+		        
+		    max = Math.max(max, cnt);
 		}
 		
-		int cnt = 1;
-		for(int i=0; i < n-1; i++) {
-			if(arr[i] >= arr[i+1]) cnt++;
-			else cnt = 1;
-			max = Math.max(max, cnt);
+		cnt = 1;
+		for(int i = 0; i < n-1; i++){
+		    cnt = (arr[i] >= arr[i+1])? cnt+1 : 1;
+		        
+		    max = Math.max(max, cnt);
 		}
+		
 		System.out.print(max);
 	}
 }
