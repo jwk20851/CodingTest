@@ -14,7 +14,7 @@ public class Main{
 		for(int i = 0; i < n; i++)
             arr[i] = Integer.parseInt(tmp[i]);
 		
-		int max = 0, cnt = 1;
+		int max = 1, cnt = 1;
 		for(int i = 0; i < n-1; i++){
 		    cnt = (arr[i] <= arr[i+1])? cnt+1 : 1;
 		        
