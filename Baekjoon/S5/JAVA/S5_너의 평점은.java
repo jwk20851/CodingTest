@@ -11,44 +11,37 @@ public class Main{
 		double sum = 0, cnt = 0;
         for(int i = 0; i < 20; i++){
             String[] tmp = br.readLine().split(" ");
+            
             double g = Double.parseDouble(tmp[1]);
             switch(tmp[2]){
                 case "A+":
                     sum+=g*4.5;
-                    cnt+=g;
                     break;
                 case "A0":
                     sum+=g*4.0;
-                    cnt+=g;
                     break;
                 case "B+":
                     sum+=g*3.5;
-                    cnt+=g;
                     break;
                 case "B0":
                     sum+=g*3.0;
-                    cnt+=g;
                     break;
                 case "C+":
                     sum+=g*2.5;
-                    cnt+=g;
                     break;
                 case "C0":
                     sum+=g*2.0;
-                    cnt+=g;
                     break;
                 case "D+":
                     sum+=g*1.5;
-                    cnt+=g;
                     break;
                 case "D0":
                     sum+=g*1.0;
-                    cnt+=g;
-                    break;
-                case "F":
-                    cnt+=g;
                     break;
             }
+            
+            if(!tmp[2].equals("P"))
+                cnt+=g;
         }
         
         if(cnt != 0)
