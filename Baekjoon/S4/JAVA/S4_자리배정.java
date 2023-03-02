@@ -26,7 +26,7 @@ public class Main{
 		int[] dy = {0, 1, 0, -1};
         int[][] arr = new int[R][C];
         arr[0][0] = 1;
-        int x = 0, y = 0, cnt = 2;
+        int x = 0, y = 0, cnt = 1;
         
         loop:
         while(true){
@@ -46,7 +46,7 @@ public class Main{
 						break;
 					}
 					
-					arr[x][y] = cnt++;
+					arr[x][y] = ++cnt;
 					
 					if(cnt == K) {
 						System.out.println((y+1)+" "+(x+1));
