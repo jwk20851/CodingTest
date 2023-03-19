@@ -11,7 +11,7 @@ public class Main{
 		
 		boolean[] arr = new boolean[1000001];
 		arr[1] = true;
-		for(int i = 2; i < 1000001; i++){
+		for(int i = 2; i < Math.sqrt(1000001); i++){
 		    if(arr[i])
 		        continue;
 		        
