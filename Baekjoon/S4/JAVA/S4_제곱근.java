@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.math.BigInteger;
 
 public class Main{
-    private static char[] arr;
 	public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BigInteger N = new BigInteger(br.readLine());
