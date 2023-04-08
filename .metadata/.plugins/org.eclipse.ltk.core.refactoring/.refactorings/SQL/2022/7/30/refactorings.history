@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SQL/lv1_역순 정렬하기&apos; to &apos;lv1_역순 정렬하기.sql&apos;" description="Rename resource &apos;lv1_역순 정렬하기&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="lv1_역순 정렬하기" name="lv1_역순 정렬하기.sql" stamp="1658429531492" updateReferences="true"/>
+</session>

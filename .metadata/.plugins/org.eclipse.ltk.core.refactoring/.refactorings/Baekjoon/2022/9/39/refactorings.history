@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Baekjoon/S5/JAVA/S5_UCPC는 무엇의 약자일까？2.java&apos; to &apos;S5_팩토리얼 0의 개수.java&apos;" description="Rename resource &apos;S5_UCPC는 무엇의 약자일까？2.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="S5/JAVA/S5_UCPC는 무엇의 약자일까？2.java" name="S5_팩토리얼 0의 개수.java" stamp="1664018495813" updateReferences="true"/>
+</session>

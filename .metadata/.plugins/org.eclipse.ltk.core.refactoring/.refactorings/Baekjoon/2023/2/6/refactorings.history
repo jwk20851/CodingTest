@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Baekjoon/S3/JAVA/S3_.java&apos; to &apos;S3_이건 꼭 풀어야 해!.java&apos;" description="Rename resource &apos;S3_.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="S3/JAVA/S3_.java" name="S3_이건 꼭 풀어야 해!.java" stamp="1676115320551" updateReferences="true"/>
+</session>
