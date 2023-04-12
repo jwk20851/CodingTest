@@ -38,10 +38,7 @@ public class Main{
 			b--;
 		
 		swap(a-1, b);
-		int tmp = arr[a-1];
-		arr[a-1] = arr[b];
-		arr[b] = tmp;
-
+		
 		b = arr.length -1;
 		while(a < b){
 		    swap(a, b);
@@ -52,9 +49,9 @@ public class Main{
 		return true;
 	}
 	
-	public static void swap(int a, int b){
-	    int tmp = arr[a];
-		arr[a] = arr[b];
-		arr[b] = tmp;
+	public static void swap(int x, int y){
+	    int tmp = arr[x];
+		arr[x] = arr[y];
+		arr[y] = tmp;
 	}
 }
