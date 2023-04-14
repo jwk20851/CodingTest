@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Baekjoon/S5/JAVA/S5_배열합치기.java&apos; to &apos;S5_배열 합치기.java&apos;" description="Rename resource &apos;S5_배열합치기.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="S5/JAVA/S5_배열합치기.java" name="S5_배열 합치기.java" stamp="1671971741886" updateReferences="true"/>
-</session>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Baekjoon/S5/JAVA/S5_폴리노미오.java&apos; to &apos;S5_폴리오미노.java&apos;" description="Rename resource &apos;S5_폴리노미오.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="S5/JAVA/S5_폴리노미오.java" name="S5_폴리오미노.java" stamp="1681225142793" updateReferences="true"/>
-</session>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Baekjoon/S5/JAVA/S5_좌표 정렬하기2.java&apos; to &apos;S5_좌표 정렬하기 2.java&apos;" description="Rename resource &apos;S5_좌표 정렬하기2.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="S5/JAVA/S5_좌표 정렬하기2.java" name="S5_좌표 정렬하기 2.java" stamp="1667312171748" updateReferences="true"/>
-</session>

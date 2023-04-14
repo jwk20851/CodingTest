@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Baekjoon/S4/JAVA/S4_바닥장식.java&apos; to &apos;S4_바닥 장식.java&apos;" description="Rename resource &apos;S4_바닥장식.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="S4/JAVA/S4_바닥장식.java" name="S4_바닥 장식.java" stamp="1674657751782" updateReferences="true"/>
-</session>

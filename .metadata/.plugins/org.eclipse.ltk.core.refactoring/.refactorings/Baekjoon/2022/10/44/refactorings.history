@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move &apos;S5_요세푸스 문제 0.java&apos; to &apos;JAVA&apos;" description="Move &apos;S5_요세푸스 문제 0.java&apos; to &apos;JAVA&apos;" destination="S5/JAVA" element1="S5/S5_요세푸스 문제 0.java" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1666970929397" updateReferences="true"/>
-</session>

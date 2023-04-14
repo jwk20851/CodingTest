@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Baekjoon/S2/JAVA/S2_특정 거리의 도시찾기.java&apos; to &apos;S2_특정 거리의 도시 찾기.java&apos;" description="Rename resource &apos;S2_특정 거리의 도시찾기.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="S2/JAVA/S2_특정 거리의 도시찾기.java" name="S2_특정 거리의 도시 찾기.java" stamp="1675417424545" updateReferences="true"/>
-</session>

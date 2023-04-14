@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Baekjoon/S1/JAVA/S1_절대값 힙.java&apos; to &apos;S1_절댓값 힙.java&apos;" description="Rename resource &apos;S1_절대값 힙.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="S1/JAVA/S1_절대값 힙.java" name="S1_절댓값 힙.java" stamp="1670246510286" updateReferences="true"/>
-</session>

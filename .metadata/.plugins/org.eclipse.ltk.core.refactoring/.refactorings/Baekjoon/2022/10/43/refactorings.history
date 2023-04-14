@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Baekjoon/S5/JAVA/S5_.java&apos; to &apos;S5_그룹 단어 체커.java&apos;" description="Rename resource &apos;S5_.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="S5/JAVA/S5_.java" name="S5_그룹 단어 체커.java" stamp="1666093933487" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Baekjoon/S5/JAVA/S5_.java&apos; to &apos;S5_나이순 정렬.java&apos;" description="Rename resource &apos;S5_.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="S5/JAVA/S5_.java" name="S5_나이순 정렬.java" stamp="1666104843878" updateReferences="true"/>
-</session>
