@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Main{
-    private static int N, ans = 0;
+    private static int N;
     private static String[] arr;
     private static int[] strike, ball;
 	public static void main(String[] args) throws IOException{
@@ -23,6 +23,7 @@ public class Main{
 		    ball[i] = Integer.parseInt(st.nextToken());
 		}
 		
+		int ans = 0;
         for(int i = 1; i <= 9; i++){
             for(int j = 1; j <= 9; j++){ 
                 if(i == j)
@@ -32,7 +33,8 @@ public class Main{
                     if(i == k || j == k)
                         continue;
                     
-                    check(i,j,k);
+                    if(check(i,j,k))
+                        ans++;
                 }
             }
         }
@@ -40,28 +42,30 @@ public class Main{
         System.out.print(ans);
 	}
 	
-	public static void check(int a, int b, int c){
-	    boolean tmp = true;
-        for(int i = 0; i < N; i++){
+	public static boolean check(int a, int b, int c){
+        for(int i = 0; i < N; i++){ 
             int st = 0;
             int ba = 0;
-
-            if(arr[i].charAt(0)-'0'==a || arr[i].charAt(1)-'0'==b || arr[i].charAt(2)-'0'==c)
-                st++;
-            if(arr[i].charAt(0)-'0'==b || arr[i].charAt(0)-'0'==c)
-                ba++;
-            if(arr[i].charAt(1)-'0'==a || arr[i].charAt(1)-'0'==c)
-                ba++;
-            if(arr[i].charAt(2)-'0'==a || arr[i].charAt(2)-'0'==b)
-                ba++;
+            String s = arr[i];
             
-            if(strike[i] != st || ball[i] != ba){
-                tmp = false;
-                break;
-            }
+            if(s.charAt(0)-'0' == a)
+                st++;
+            if(s.charAt(1)-'0' == b)
+                st++;
+            if(s.charAt(2)-'0' == c)
+                st++;
+                
+            if(s.charAt(0)-'0' == b || s.charAt(0)-'0' == c)
+                ba++;
+            if(s.charAt(1)-'0' == a || s.charAt(1)-'0' == c)
+                ba++;
+            if(s.charAt(2)-'0' == a || s.charAt(2)-'0' == b)
+                ba++;
+                
+            if(strike[i] != st || ball[i] != ba)
+                return false;
         }
         
-        if(tmp)
-            ans++;
+        return true;
 	}
 }
