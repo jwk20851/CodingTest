@@ -3,6 +3,8 @@
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Main{
 	public static void main(String[] args) throws IOException{
@@ -13,36 +15,39 @@ public class Main{
 		    System.exit(0);
 		}
 		    
-		int max = 4000000;
-		boolean[] cNum = new boolean[max+1];
-		
-		for(int i = 2; i <= max; i++){
-		    for(int j = i+i; j <= max; j += i){
+		boolean[] cNum = new boolean[N+1];
+		for(int i = 2; i <= N; i++){
+		    for(int j = i+i; j <= N; j += i){
 		        if(!cNum[j])
 		            cNum[j] = true;
 		    }
 		}
 		
-		int l = 2, r = 2, ans = 0;
+		List<Integer> prime = new ArrayList<Integer>();
+		for(int i = 2; i <= N; i++){
+		    if(!cNum[i])
+		        prime.add(i);
+		}
+		
+		int l = 0, r = 0, ans = 0;
 		long sum = 0;
 		while(l <= r){
-		    if(sum < N){
-		        if(!cNum[r])
-		            sum += r;
-		            
-		        if(r <= N)
-		            r++;
-		    }
-		    else if(sum >= N){
-		        if(sum == N)
-		            ans++;
-		            
-		        if(!cNum[l])
-		            sum -= l;
-		        l++;
-		    }
-		    if(l>N && r>N)
-		        break;
+            if(sum < N){
+                if(r < prime.size())
+                    sum += prime.get(r);
+                r++;
+            }
+            else if(sum >= N){
+                if(sum == N)
+                    ans++;
+                
+                sum -= prime.get(l);
+                
+                if(l < prime.size())
+                    l++;
+            }
+            else if(r > prime.size() && l > prime.size())
+                break;
 		}
 		
         System.out.print(ans);
