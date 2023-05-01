@@ -13,6 +13,11 @@ public class Main{
         int score = Integer.parseInt(st.nextToken());
         int P = Integer.parseInt(st.nextToken());
         
+        if(N == 0){
+			System.out.println(1);
+			System.exit(0);
+        }
+        
         st = new StringTokenizer(br.readLine());
 		int[] arr = new int[N];
 		for(int i = 0; i < N; i++)
