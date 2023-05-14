@@ -9,22 +9,22 @@ public class Main{
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
-		int[] arr = new int[4];
-		int[][][] dp = new int[N+1][4][2];
+		int[] arr = new int[3];
+		int[][][] dp = new int[N+1][3][2];
 		int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
 		StringTokenizer st;
 		for(int i = 1; i <= N; i++){
 		    st = new StringTokenizer(br.readLine());
-		    for(int j = 1; j <= 3; j++){
+		    for(int j = 0; j < 3; j++){
 		        arr[j] = Integer.parseInt(st.nextToken());
 		    }
 		    
-		    for(int j = 1; j <= 3; j++){
-		        if(j == 1){
+		    for(int j = 0; j < 3; j++){
+		        if(j == 0){
                     dp[i][j][0] = arr[j] + Math.min(dp[i-1][j][0], dp[i-1][j+1][0]);
                     dp[i][j][1] = arr[j] + Math.max(dp[i-1][j][1], dp[i-1][j+1][1]);
                 }
-                else if(j == 3){
+                else if(j == 2){
                     dp[i][j][0] = arr[j] + Math.min(dp[i-1][j][0], dp[i-1][j-1][0]);
                     dp[i][j][1] = arr[j] + Math.max(dp[i-1][j][1], dp[i-1][j-1][1]);
                 }
