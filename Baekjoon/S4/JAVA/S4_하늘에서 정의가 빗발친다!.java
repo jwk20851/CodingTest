@@ -24,7 +24,7 @@ public class Main{
 	        p[i] = new Point(i+1, tmp/v);
 	    }
 	    
-	    Arrays.sort(p, new Comparator<Point>(){
+	    Arrays.sort(p, new Comparator<Point>(){		//리스트일 경우 Collections.sort(리스트명, new Comparator<타입>(){동일});
 	        @Override
 	        public int compare(Point o1, Point o2){
                 if(o1.val == o2.val)
