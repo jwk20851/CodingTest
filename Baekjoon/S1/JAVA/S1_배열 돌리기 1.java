@@ -47,13 +47,14 @@ public class Main{
 					int nx = x + dx[idx];
 					int ny = y + dy[idx];
 					
-					if(nx>=i && ny>=i && nx<N-i && ny<M-i){
-						arr[x][y] = arr[nx][ny];
-						x = nx;
-						y = ny;
+					if(nx<i || ny<i || nx>=N-i || ny>=M-i){
+					    idx++;
+					    continue;
 					}
-					else
-						idx++;
+			
+					arr[x][y] = arr[nx][ny];
+					x = nx;
+					y = ny;
 				}
 				
 				arr[i+1][i] = start;
