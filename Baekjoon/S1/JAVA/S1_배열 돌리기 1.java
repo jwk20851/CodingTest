@@ -40,8 +40,8 @@ public class Main{
 	    int cnt = Math.min(N, M)/2;
 	    while(R-- > 0){
 	        for(int i = 0; i < cnt; i++){
-				int start = arr[i][i];
 				int x = i, y = i;
+				int start = arr[x][y];
 				int idx = 0;
 				while(idx < 4){
 					int nx = x + dx[idx];
