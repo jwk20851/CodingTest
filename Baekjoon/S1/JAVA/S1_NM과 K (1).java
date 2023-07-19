@@ -9,7 +9,6 @@ public class Main{
     private static int N,M,K, max = Integer.MIN_VALUE;
     private static int[][] map;
     private static boolean[][] visited;
-    private static int[] arr;
     private static int[] dx = {-1, 1, 0, 0};
     private static int[] dy = {0, 0, -1, 1};
     public static void main(String[] args) throws IOException{
@@ -27,21 +26,15 @@ public class Main{
 		}
 		
 		visited = new boolean[N][M];
-		arr = new int[K];
-		
-		DFS(0, 0, 0);
+
+		DFS(0, 0, 0, 0);
 		
 		System.out.print(max);
     }
     
-    private static void DFS(int x, int y, int depth){
+    private static void DFS(int x, int y, int depth, int sum){
         if(depth == K){
-            int sum = 0;
-            for(int i : arr)
-                sum += i;
-                
             max = Math.max(max, sum);
-            
             return;
         }
         
@@ -52,9 +45,7 @@ public class Main{
                 
                 if(check(i, j)){
                     visited[i][j] = true;
-                    arr[depth] = map[i][j];
-                    DFS(x, y, depth +1);
-                    arr[depth] = 0;
+                    DFS(x, y, depth +1, sum +map[i][j]);
                     visited[i][j] = false;
                 }
             }
