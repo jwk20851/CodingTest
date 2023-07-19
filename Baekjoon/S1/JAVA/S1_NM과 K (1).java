@@ -29,25 +29,32 @@ public class Main{
 		visited = new boolean[N][M];
 		arr = new int[K];
 		
-		DFS(0, 0, 0, 0);
+		DFS(0, 0, 0);
 		
 		System.out.print(max);
     }
     
-    private static void DFS(int x, int y, int depth, int sum){
+    private static void DFS(int x, int y, int depth){
         if(depth == K){
-            max = Math.max(max,sum);
+            int sum = 0;
+            for(int i : arr)
+                sum += i;
+                
+            max = Math.max(max, sum);
+            
             return;
         }
         
         for(int i = x; i < N; i++){
-            for (int j = y; j < M; j++){
+            for(int j = y; j < M; j++){
                 if(visited[i][j])
                     continue;
-                    
+                
                 if(check(i, j)){
                     visited[i][j] = true;
-                    DFS(x, y, depth + 1, sum + map[i][j]);
+                    arr[depth] = map[i][j];
+                    DFS(x, y, depth +1);
+                    arr[depth] = 0;
                     visited[i][j] = false;
                 }
             }
@@ -55,17 +62,16 @@ public class Main{
     }
     
     public static boolean check(int x, int y){
-        boolean flag = true;
-        for (int i = 0; i < 4; i++){
+        for(int i = 0; i < 4; i++){
             int nx = x + dx[i];
             int ny = y + dy[i];
-
-            if(nx >= 0 && nx < N && ny >= 0 && ny < M){
-                if(visited[nx][ny]){
-                    flag = false;
-                }
-            }
+            
+            if(nx<0 || nx>=N || ny<0 || ny>=M)
+                continue;
+            if(visited[nx][ny])
+                return false;
         }
-        return flag;
+        
+        return true;
     }
 }
