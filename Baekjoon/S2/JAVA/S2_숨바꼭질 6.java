@@ -25,7 +25,7 @@ public class Main{
 		System.out.println(gcd);
     }
     
-    public static int GCD(int a, int b){
+    public static int GCD(int a, int b){	//GCD 방식 확인
 		if(b == 0)
 		    return a;
 		return GCD(b, a%b);
