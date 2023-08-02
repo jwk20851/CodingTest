@@ -15,17 +15,17 @@ public class Main{
         st = new StringTokenizer(br.readLine());
         int[] pos = new int[N];
         for(int i = 0; i < N; i++){
-            pos[i] = Math.abs(S-Integer.parseInt(st.nextToken()));
+            pos[i] = Math.abs(S - Integer.parseInt(st.nextToken()));
         }
         
         int gcd = pos[0];
 		for(int i = 1; i < N; i++)
-			gcd = GCD(gcd,pos[i]);
+			gcd = GCD(gcd, pos[i]);
 		
 		System.out.println(gcd);
     }
     
-    public static int GCD(int a, int b){	//GCD 방식 확인
+    public static int GCD(int a, int b){
 		if(b == 0)
 		    return a;
 		return GCD(b, a%b);
