@@ -23,7 +23,7 @@ public class Main{
             else{
                 if(!stack.isEmpty() && stack.peek() == order){
                     stack.pop();
-                    i--;
+                    i--;	//이전값 다시 확인해줘야 함
                     order++;
                 }
                 else
