@@ -24,7 +24,7 @@ public class Main{
         System.out.print(sb);
         
         /*
-        //bw 경우, 속도가 더 빠르고 메모리를 적게 사용한다
+        //bw 경우, 속도가 더 빠르고 메모리를 적게 사용한다(flush(), close() 필수)
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         for(int i = 0; i < N; i++){
 			bw.write(star[i]);
