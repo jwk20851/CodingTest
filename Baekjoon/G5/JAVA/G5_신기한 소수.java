@@ -23,7 +23,7 @@ public class Main{
 	    
 	    for(int i = 1; i < 10; i++){
 	        int tmp = num*10 +i;
-    		if(isPrime(tmp))
+    		if(isPrime(tmp))		//소수일 경우 자릿수 늘리며 탐색
     			DFS(tmp, depth-1);
 	    }
 	}
