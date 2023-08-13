@@ -37,7 +37,7 @@ public class Main{
 		map[r][c] = -1;
 		
 	    for(int i = 0; i < 4; i++){
-			dir = (dir+3)% 4;
+			dir = (dir-1 >= 0)? dir-1 : 3;
 			int nr = r + dr[dir];
 			int nc = c + dc[dir];
 			
