@@ -14,7 +14,6 @@ public class Main{
     private static int N,M,R;
     private static List<List<Integer>> li;
     private static int[] ans;
-    private static boolean[] visited;
     public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -38,8 +37,6 @@ public class Main{
         for(int i = 1; i <= N; i++)
             Collections.sort(li.get(i), Collections.reverseOrder());
         
-        ans = new int[N+1];
-        visited = new boolean[N+1];
         BFS();
         
         StringBuilder sb = new StringBuilder();
@@ -50,18 +47,17 @@ public class Main{
     
     private static void BFS(){
         Queue<Integer> q = new LinkedList<>();
-        q.add(R);
-        visited[R] = true;
+        int cnt = 1;
         
-        int cnt = 0;
+        ans = new int[N+1];
+        ans[R] = cnt;
+        q.add(R);
         while(!q.isEmpty()){
             int tmp = q.poll();
-            ans[tmp] = ++cnt;
             
-            for(int i = 0; i < li.get(tmp).size(); i++){
-                int next = li.get(tmp).get(i);
-                if(!visited[next]){
-                    visited[next] = true;
+            for(int next : li.get(tmp)){
+                if(ans[next] == 0){
+                    ans[next] = ++cnt;
                     q.add(next);
                 }
             }
