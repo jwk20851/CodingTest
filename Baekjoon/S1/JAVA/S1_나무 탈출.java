@@ -30,7 +30,7 @@ public class Main{
 		visited = new boolean[N+1];
 		DFS(1, 0);
 		
-		System.out.print((ans%2 == 0)? "No" : "Yes");
+		System.out.print((cnt%2 == 0)? "No" : "Yes");
     }
     
     private static void DFS(int node, int depth){
@@ -41,6 +41,6 @@ public class Main{
 		}
 		
 		if(node != 1 && li.get(node).size() == 1)
-			ans += depth;
+			cnt += depth;
     }
 }
