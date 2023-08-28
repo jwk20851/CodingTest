@@ -1,0 +1,48 @@
+//https://www.acmicpc.net/problem/1911
+
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class Main{
+    public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int N = Integer.parseInt(st.nextToken());
+		int L = Integer.parseInt(st.nextToken());
+		
+		int[][] puddle = new int[N][2];
+		for(int i = 0; i < N; i++){
+			st = new StringTokenizer(br.readLine());
+			puddle[i][0] = Integer.parseInt(st.nextToken());
+			puddle[i][1] = Integer.parseInt(st.nextToken());
+		}
+		
+		Arrays.sort(puddle, new Comparator<int []>(){
+			@Override
+			public int compare(int[] o1, int[] o2){
+				if(o1[0] == o2[0])
+					return o1[1] - o2[1];
+				return o1[0] - o2[0];
+			}
+		});
+		
+		int dis = 0, cnt = 0;
+		for(int i = 0; i < N; i++){
+			if(dis < puddle[i][0])
+				dis = puddle[i][0];
+				
+			if(dis <= puddle[i][1]){
+				while(dis < puddle[i][1]){
+					dis += L;
+					cnt++;
+				}
+			}
+		}
+		
+		System.out.print(cnt);
+    }
+}
